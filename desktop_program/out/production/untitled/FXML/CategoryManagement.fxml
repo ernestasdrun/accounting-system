@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.CategoryManagement">
+   <children>
+      <MenuBar layoutY="2.0" prefHeight="25.0" prefWidth="600.0">
+        <menus>
+          <Menu mnemonicParsing="false" text="File">
+            <items>
+              <MenuItem fx:id="saveBtn" mnemonicParsing="false" text="Save" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+      <TabPane layoutY="26.0" prefHeight="374.0" prefWidth="600.0" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+          <Tab text="Current category">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Button fx:id="mngCatBalBtn" layoutX="476.0" layoutY="52.0" mnemonicParsing="false" onAction="#loadExpenseIncomeManagementForm" text="Manage balance" />
+                        <Button fx:id="mngCatUserBtn" layoutX="490.0" layoutY="84.0" mnemonicParsing="false" onAction="#loadUserManagement" text="Manage users" />
+                        <Label layoutX="432.0" layoutY="24.0" text="Actions of current category" />
+                        <Button fx:id="exitCatBtn" layoutX="490.0" layoutY="290.0" mnemonicParsing="false" onAction="#goBackToMainWindow" prefHeight="41.0" prefWidth="95.0" text="Back to main" />
+                        <Button fx:id="previousCatBtn" layoutX="432.0" layoutY="245.0" mnemonicParsing="false" onAction="#backToPreviousCategoryMng" prefHeight="34.0" prefWidth="154.0" text="Back to previous category" />
+                        <Label layoutX="27.0" layoutY="21.0" text="Subcategories">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                        </Label>
+                        <ListView fx:id="subcategoryList" layoutX="21.0" layoutY="48.0" prefHeight="249.0" prefWidth="166.0" />
+                        <Button fx:id="deleteSubcatBtn" layoutX="116.0" layoutY="298.0" mnemonicParsing="false" onAction="#deleteSubcategory" prefHeight="25.0" prefWidth="71.0" text="Delete" />
+                        <Button fx:id="goToSubcategory" layoutX="202.0" layoutY="259.0" mnemonicParsing="false" onAction="#goToSelectedCategory" prefHeight="31.0" prefWidth="132.0" text="Go to subcategory" />
+                        <Button fx:id="mngSubcatBtn" layoutX="204.0" layoutY="220.0" mnemonicParsing="false" onAction="#loadExpenseIncomeManagementFormSubcat" prefHeight="31.0" prefWidth="129.0" text="Manage balance" />
+                        <TextField fx:id="newSubcatField" layoutX="202.0" layoutY="52.0" />
+                        <Button fx:id="newSubcatBtn" layoutX="202.0" layoutY="77.0" mnemonicParsing="false" onAction="#createNewSubcategory" text="New subcategory" />
+                        <Label layoutX="204.0" layoutY="34.0" text="Name" />
+                        <TextField fx:id="subcatRenameField" layoutX="202.0" layoutY="141.0" />
+                        <Button fx:id="renameSubcatBtn" layoutX="204.0" layoutY="166.0" mnemonicParsing="false" onAction="#renameSubcategory" text="Rename subcategory" />
+                        <Label layoutX="202.0" layoutY="124.0" text="New name" />
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+          <Tab text="----">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+            </content>
+          </Tab>
+        </tabs>
+      </TabPane>
+   </children>
+</AnchorPane>

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.MainAccountingWindow">
+   <children>
+      <HBox layoutY="27.0" prefHeight="372.0" prefWidth="600.0">
+         <children>
+            <ListView fx:id="categoryList" prefHeight="200.0" prefWidth="200.0" />
+            <AnchorPane prefHeight="200.0" prefWidth="200.0">
+               <children>
+                  <Button fx:id="manageCatBtn" layoutX="42.0" layoutY="228.0" mnemonicParsing="false" onAction="#loadCategoryManagementForm" prefHeight="25.0" prefWidth="117.0" text="Manage category" />
+                  <Button fx:id="delCatBtn" layoutX="50.0" layoutY="30.0" mnemonicParsing="false" onAction="#deleteCategory" text="Delete category" />
+                  <Button fx:id="viewCatBtn" layoutX="43.0" layoutY="117.0" mnemonicParsing="false" onAction="#showCategoryInfo" text="View category info" />
+                  <Button fx:id="renCatBtn" layoutX="46.0" layoutY="71.0" mnemonicParsing="false" onAction="#renameCategory" text="Rename category" />
+               </children>
+            </AnchorPane>
+            <AnchorPane prefHeight="200.0" prefWidth="200.0" />
+         </children>
+      </HBox>
+      <MenuBar layoutY="2.0" prefHeight="25.0" prefWidth="600.0">
+        <menus>
+          <Menu mnemonicParsing="false" text="File">
+            <items>
+                  <MenuItem fx:id="saveFile" mnemonicParsing="false" text="Save" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="New">
+            <items>
+              <MenuItem fx:id="newCatBtn" mnemonicParsing="false" onAction="#createNewCategory" text="New category" />
+            </items>
+          </Menu>
+            <Menu mnemonicParsing="false" text="User">
+              <items>
+                <MenuItem fx:id="userInfoBtn" mnemonicParsing="false" onAction="#updateUserInfo" text="Update your info" />
+              </items>
+            </Menu>
+        </menus>
+      </MenuBar>
+   </children>
+</AnchorPane>
