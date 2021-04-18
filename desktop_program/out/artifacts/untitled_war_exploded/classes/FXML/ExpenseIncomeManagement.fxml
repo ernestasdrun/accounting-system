@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.ExpenseIncomeManagement">
+   <children>
+      <MenuBar layoutY="2.0" prefHeight="25.0" prefWidth="600.0">
+        <menus>
+          <Menu mnemonicParsing="false" text="File">
+            <items>
+              <MenuItem fx:id="saveFileBtn" mnemonicParsing="false" text="Save" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="New">
+            <items>
+              <MenuItem fx:id="newIncomeBtn" mnemonicParsing="false" onAction="#createNewIncome" text="New income" />
+                  <MenuItem fx:id="newExpenseBtn" mnemonicParsing="false" onAction="#createNewExpense" text="New expense" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+      <SplitPane dividerPositions="0.46321070234113715" layoutX="-1.0" layoutY="26.0" prefHeight="374.0" prefWidth="600.0">
+        <items>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+               <children>
+                  <ListView fx:id="incomeList" layoutX="37.0" layoutY="45.0" prefHeight="125.0" prefWidth="200.0" />
+                  <ListView fx:id="expenseList" layoutX="37.0" layoutY="216.0" prefHeight="125.0" prefWidth="200.0" />
+                  <Label layoutX="35.0" layoutY="14.0" text="Income">
+                     <font>
+                        <Font size="21.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="37.0" layoutY="186.0" text="Expense">
+                     <font>
+                        <Font size="21.0" />
+                     </font>
+                  </Label>
+                  <Button fx:id="deleteIncomeBtn" layoutX="137.0" layoutY="17.0" mnemonicParsing="false" onAction="#deleteIncome" prefHeight="25.0" prefWidth="100.0" text="Delete income" />
+                  <Button fx:id="deleteExpenseBtn" layoutX="137.0" layoutY="189.0" mnemonicParsing="false" onAction="#deleteExpense" prefHeight="25.0" prefWidth="100.0" text="Delete expense" />
+               </children>
+            </AnchorPane>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+               <children>
+                  <Button fx:id="editExpenseBtn" layoutX="29.0" layoutY="237.0" mnemonicParsing="false" onAction="#editExpenseInfo" prefHeight="31.0" prefWidth="123.0" text="Edit expense" />
+                  <Button fx:id="rditIncomeBtn" layoutX="26.0" layoutY="86.0" mnemonicParsing="false" onAction="#editIncomeInfo" prefHeight="31.0" prefWidth="123.0" text="Edit income" />
+                  <Button fx:id="goBackBtn" layoutX="200.0" layoutY="306.0" mnemonicParsing="false" onAction="#backToPreviousWindow" prefHeight="31.0" prefWidth="82.0" text="Back" />
+                  <Label layoutX="29.0" layoutY="22.0" text="Description" />
+                  <Label layoutX="177.0" layoutY="22.0" text="Amount" />
+                  <TextField fx:id="incomeDescrBtn" layoutX="29.0" layoutY="39.0" prefHeight="25.0" prefWidth="113.0" />
+                  <TextField fx:id="incomeAmountBtn" layoutX="177.0" layoutY="39.0" prefHeight="25.0" prefWidth="113.0" />
+                  <TextField fx:id="expenseDescrBtn" layoutX="31.0" layoutY="189.0" prefHeight="25.0" prefWidth="113.0" />
+                  <TextField fx:id="expenseAmountBtn" layoutX="177.0" layoutY="189.0" prefHeight="25.0" prefWidth="113.0" />
+                  <Label layoutX="31.0" layoutY="172.0" text="Description" />
+                  <Label layoutX="177.0" layoutY="172.0" text="Amount" />
+               </children>
+            </AnchorPane>
+        </items>
+      </SplitPane>
+   </children>
+</AnchorPane>
