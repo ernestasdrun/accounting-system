@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.UserManagement">
+    <children>
+        <MenuBar layoutY="2.0" prefHeight="25.0" prefWidth="614.0">
+            <menus>
+                <Menu mnemonicParsing="false" text="File">
+                    <items>
+                        <MenuItem fx:id="saveBtn" mnemonicParsing="false" text="Save" />
+                    </items>
+                </Menu>
+            </menus>
+        </MenuBar>
+      <SplitPane dividerPositions="0.803763440860215" layoutY="27.0" orientation="VERTICAL" prefHeight="374.0" prefWidth="614.0">
+        <items>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="285.0" prefWidth="612.0">
+               <children>
+                  <Label layoutX="34.0" layoutY="14.0" text="People">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="personField" layoutX="478.0" layoutY="80.0" prefHeight="25.0" prefWidth="116.0" />
+                  <Button fx:id="addPersonBtn" layoutX="531.0" layoutY="119.0" mnemonicParsing="false" onAction="#addNewPerson" prefHeight="27.0" prefWidth="62.0" text="Add" />
+                  <Button fx:id="delPersonBtn" layoutX="531.0" layoutY="198.0" mnemonicParsing="false" onAction="#removePerson" prefHeight="27.0" prefWidth="62.0" text="Delete" />
+                  <Button fx:id="backBtn" layoutX="531.0" layoutY="10.0" mnemonicParsing="false" onAction="#goBack" prefHeight="36.0" prefWidth="72.0" text="Back" />
+                  <Label layoutX="478.0" layoutY="63.0" text="Login name" />
+                  <ListView fx:id="personList" layoutX="21.0" layoutY="66.0" prefHeight="258.0" prefWidth="420.0" />
+               </children>
+            </AnchorPane>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="32.0" prefWidth="612.0">
+               <children>
+                  <Label layoutX="23.0" layoutY="14.0" text="Companies">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <Button fx:id="addCompanyBtn" layoutX="529.0" layoutY="117.0" mnemonicParsing="false" onAction="#addNewCompany" prefHeight="27.0" prefWidth="62.0" text="Add" />
+                  <TextField fx:id="companyField" layoutX="475.0" layoutY="78.0" prefHeight="25.0" prefWidth="116.0" />
+                  <Button fx:id="delCompanyBtn" layoutX="529.0" layoutY="199.0" mnemonicParsing="false" onAction="#removeCompany" prefHeight="27.0" prefWidth="62.0" text="Delete" />
+                  <Label layoutX="475.0" layoutY="61.0" text="Login name" />
+                  <ListView fx:id="companyList" layoutX="23.0" layoutY="49.0" prefHeight="258.0" prefWidth="420.0" />
+               </children></AnchorPane>
+        </items>
+      </SplitPane>
+    </children>
+</AnchorPane>
